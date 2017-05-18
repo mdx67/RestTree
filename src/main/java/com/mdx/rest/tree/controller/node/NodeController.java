@@ -5,7 +5,7 @@ import com.mdx.rest.tree.dto.node.NodeDTOWithChildren;
 import com.mdx.rest.tree.dto.node.NodeDTOWithoutChildren;
 import com.mdx.rest.tree.exception.BusinessException;
 import com.mdx.rest.tree.exception.node.NodeNotFoundException;
-import com.mdx.rest.tree.excetion.rest.BadRequestException;
+import com.mdx.rest.tree.exception.rest.BadRequestException;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;

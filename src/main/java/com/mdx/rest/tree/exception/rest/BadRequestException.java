@@ -1,4 +1,4 @@
-package com.mdx.rest.tree.excetion.rest;
+package com.mdx.rest.tree.exception.rest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
