@@ -43,6 +43,8 @@ public class NodeServiceTest {
 
         verify(manager, times(1)).persist(node);
     }
+    
+    
 
     @Test(expected = BusinessException.class)
     public void testSaveError() {

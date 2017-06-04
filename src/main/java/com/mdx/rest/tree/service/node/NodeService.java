@@ -45,14 +45,6 @@ public class NodeService {
         manager.remove(node);
     }
 
-    public void deleteRecursively(Node node) {
-        listChildren(node).forEach(children -> {
-            deleteRecursively(children);
-        });
-
-        delete(node);
-    }
-
     public Node findById(Long id) throws NodeNotFoundException {
         Node node = manager.find(Node.class, id);
 
@@ -84,25 +76,9 @@ public class NodeService {
     public Node getAllTree() {
         Node firstNode = getMainNode();
 
-        addChildrenIfNecessary(firstNode);
-
         return firstNode;
     }
-
-    private void addChildrenIfNecessary(Node node) {
-        List<Node> childrenList = listChildren(node);
-
-        if (childrenList.isEmpty()) {
-            return;
-        }
-
-        for (Node children : childrenList) {
-            node.getChildren().add(children);
-
-            addChildrenIfNecessary(children);
-        }
-    }
-
+    
     private Boolean existsMainNode() {
         return getMainNode() != null;
     }

@@ -72,7 +72,7 @@ public class NodeController {
     @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
     public ResponseEntity delete(@PathVariable("id") Long id) throws BadRequestException {
         try {
-            nodeService.deleteRecursively(nodeService.findById(id));
+            nodeService.delete(nodeService.findById(id));
 
             return new ResponseEntity(HttpStatus.OK);
         } catch (Exception e) {
